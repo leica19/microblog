@@ -27,17 +27,6 @@ def login():
 @app.route('/index')
 @login_required
 def index():
-    user = {'username': 'shigaki'}
-    posts = [
-        {
-            'author': {'username': 'nose'},
-            'body': 'Beautiful day in Osaka!'
-        },
-        {
-            'author': {'username': 'morimoto'},
-            'body': 'The Avengers movie was so cool!'
-        }
-    ]
     return render_template('index.html', title='Home Page', posts=posts)
 
 @app.route('/logout')
