@@ -5,8 +5,9 @@ from app.forms import LoginForm
 from flask_login import current_user, login_user, logout_user, login_required
 from app.models import User, Post
 from werkzeug.urls import url_parse
-from app.forms import RegistrationForm, EditProfileForm, PostForm
+from app.forms import RegistrationForm, EditProfileForm, PostForm, RestPasswordRequestForm
 from datetime import datetime
+from app.email import send_password_reset_email
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -139,3 +140,8 @@ def explore():
     page = request.args.get('page', 1, type=int)
     posts = Post.query.order_by(Post.timestamp.desc()).paginate(page, app.config['POSTS_PER_PAGE'], False)
     return render_template('index.html', title='Explore', posts=posts.items)
+
+@app.route('/reset_password_request', methods=['GET', 'POST'])
+def reset_password_request():
+    form = RestPasswordRequestForm()
+    return render_template('reset_password_request.html', title='Reset Password', form=form)
