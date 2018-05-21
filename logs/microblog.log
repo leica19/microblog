@@ -111,3 +111,5 @@ werkzeug.routing.BuildError: Could not build url for endpoint 'news'. Did you me
 2018-05-21 23:33:43,961 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
 2018-05-21 23:34:11,135 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
 2018-05-21 23:34:45,018 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:35:46,941 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:38:02,885 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
