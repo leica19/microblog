@@ -3,7 +3,16 @@
 
 {% block app_content %}
 <h1>What's new?</h1>
-{{ data }}
+{% for da in data['articles'] %}
+<ul>
+  <li>
+    <h4><a href="{{ da['url'] }}">{{ da['title'] }}</a></h4>
+    <a href="{{ da['url'] }}"><img src="{{ da['urlToImage'] }}" class="img-responsive img-thumbnail"style="max-width: 200px; max-height: 200px;"></a>
+  </li>
+</ul>
 <hr>
+{% endfor %}
+<!--
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsF-uv5WhHTAHC2UH3nQzyI0761OFbSA58L8pr1Pim0ht75eEBTA">
+-->
 {% endblock %}

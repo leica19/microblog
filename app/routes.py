@@ -200,10 +200,10 @@ def unfollow(username):
 @app.route('/news')
 @login_required
 def news():
-    url = '?' + 'country=us&' + 'apiKey='
+    url = 'url?' + 'country=us&' + 'apiKey='
     response = requests.get(url)
     data = response.json()
-    return render_template('news.html', data=data['articles'])
+    return render_template('news.html', data=data)
 
 @app.route('/translate', methods=['POST'])
 @login_required

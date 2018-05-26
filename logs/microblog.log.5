@@ -1,0 +1,122 @@
+2018-05-21 19:16:20,318 INFO: Microblog startup [in /home/shigaki/microblog/app/__init__.py:52]
+2018-05-21 19:16:22,487 ERROR: Exception on /edit_profile [GET] [in /home/shigaki/microblog/venv/local/lib/python2.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/shigaki/microblog/venv/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shigaki/microblog/venv/local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shigaki/microblog/venv/local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/shigaki/microblog/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shigaki/microblog/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/shigaki/microblog/venv/local/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/shigaki/microblog/app/routes.py", line 159, in edit_profile
+    form=form, photo=photo)
+NameError: global name 'photo' is not defined
+2018-05-21 19:16:24,921 ERROR: Exception on /edit_profile [GET] [in /home/shigaki/microblog/venv/local/lib/python2.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/shigaki/microblog/venv/local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shigaki/microblog/venv/local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shigaki/microblog/venv/local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/shigaki/microblog/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shigaki/microblog/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/shigaki/microblog/venv/local/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/shigaki/microblog/app/routes.py", line 159, in edit_profile
+    form=form, photo=photo)
+NameError: global name 'photo' is not defined
+2018-05-21 19:17:04,352 INFO: Microblog startup [in /home/shigaki/microblog/app/__init__.py:52]
+2018-05-21 19:24:30,725 INFO: Microblog startup [in /home/shigaki/microblog/app/__init__.py:52]
+2018-05-21 22:18:36,513 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:08:25,452 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:11:01,350 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:16:41,012 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:16:43,877 ERROR: Exception on /index [GET] [in c:\users\user\appdata\local\programs\python\python36\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\user\microblog\app\routes.py", line 41, in index
+    prev_url=prev_url)
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\user\microblog\app\templates\index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Users\user\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 21, in block "body"
+    {% block navbar %}
+  File "C:\Users\user\microblog\app\templates\base.html", line 23, in block "navbar"
+    <li><a href="{{ url_for('news') }}">News</a></li>
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\flask\helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\flask\app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\flask\helpers.py", line 345, in url_for
+    force_external=external)
+  File "c:\users\user\appdata\local\programs\python\python36\lib\site-packages\werkzeug\routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'news'. Did you mean 'index' instead?
+2018-05-21 23:18:02,042 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:18:17,087 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:21:43,422 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:23:05,141 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:25:39,619 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:26:16,102 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:27:04,169 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:29:08,632 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:30:18,234 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:30:43,734 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:31:38,102 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:32:12,996 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:32:25,566 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:33:06,740 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:33:43,961 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:34:11,135 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:34:45,018 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:35:46,941 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:38:02,885 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:38:47,181 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:47:44,601 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-21 23:48:05,274 INFO: Microblog startup [in C:\Users\user\microblog\app\__init__.py:52]
+2018-05-22 13:34:00,662 INFO: Microblog startup [in /home/shigaki/microblog/app/__init__.py:52]
+2018-05-22 13:36:20,883 INFO: Microblog startup [in /home/shigaki/microblog/app/__init__.py:52]
+2018-05-22 13:40:08,269 INFO: Microblog startup [in /home/shigaki/microblog/app/__init__.py:52]
+2018-05-22 13:40:54,171 INFO: Microblog startup [in /home/shigaki/microblog/app/__init__.py:52]
