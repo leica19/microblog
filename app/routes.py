@@ -10,7 +10,11 @@ from app.forms import LoginForm, RegistrationForm, EditProfileForm, PostForm, \
     ResetPasswordRequestForm, ResetPasswordForm
 from app.models import User, Post
 from app.email import send_password_reset_email
+# for api use
 import requests
+import os
+from werkzeug.utils import secure_filename
+import ConfigParser
 
 
 @app.before_request
@@ -156,6 +160,11 @@ def edit_profile():
     if form.validate_on_submit():
         current_user.username = form.username.data
         current_user.about_me = form.about_me.data
+        f = form.photo.data
+        filename = secure_filename(f.filename)
+        f.save(os.path.join(
+            app.instance_path, 'photos', filename
+        ))
         db.session.commit()
         flash(_('Your changes have been saved.'))
         return redirect(url_for('edit_profile'))
@@ -200,7 +209,20 @@ def unfollow(username):
 @app.route('/news')
 @login_required
 def news():
-    url = 'url?' + 'country=us&' + 'apiKey='
+    config = ConfigParser.SafeConfigParser()
+
+    # make the file path
+    base = os.path.dirname(os.path.abspath(__file__))
+    name = os.path.normpath(os.path.join(base, '../tokens/news_api.txt'))
+
+    # read the config file
+    config.read(name)
+    url = config.get('news', 'url')
+    apiKey = config.get('news', 'apiKey')
+
+    # make the end point
+    url = url + 'country=us&' + 'apiKey=' + apiKey
+    
     response = requests.get(url)
     data = response.json()
     return render_template('news.html', data=data)
