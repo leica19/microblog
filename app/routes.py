@@ -1,3 +1,5 @@
+
+# modules
 from datetime import datetime
 from flask import render_template, flash, redirect, url_for, request, g, \
     jsonify
@@ -222,7 +224,7 @@ def news():
 
     # make the end point
     url = url + 'country=us&' + 'apiKey=' + apiKey
-    
+
     response = requests.get(url)
     data = response.json()
     return render_template('news.html', data=data)
